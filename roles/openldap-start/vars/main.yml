@@ -1,0 +1,3 @@
+sudo_usr: ansible-adm
+openldap_install_dir: /applications/openldap
+openldap_start_args: 

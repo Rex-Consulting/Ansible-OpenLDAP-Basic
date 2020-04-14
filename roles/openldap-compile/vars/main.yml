@@ -1,0 +1,13 @@
+admin_usr: ansible-adm
+src_dir: /appl/src/
+dependencies:
+  - libtool-ltdl-devel
+openldap_version: 2.4.49
+openldap_install_dir: /appl/openldap/
+openldap_config_args: --prefix={{ openldap_install_dir }} --disable-bdb --disable-hdb --enable-ldap --enable-meta --enable-overlays --enable-modules
+working_env:
+  CC: gcc
+  CFLAGS: -O -g
+  CPPFLAGS: -I/appl/openldap/include -I/usr/include -DF00=42
+  LDFLAGS: -L/appl/openldap/lib -L/usr/lib
+  LIBS: -lresolv

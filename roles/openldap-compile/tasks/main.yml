@@ -1,0 +1,16 @@
+---
+- import_tasks: check_dependencies.yml
+  tags:
+    - check:dependencies
+
+- import_tasks: copy_dependencies.yml
+  tags:
+    - copy:dependencies
+
+- import_tasks: install_openldap.yml
+  tags:
+    - install:all
+
+- import_tasks: start_openldap.yml
+  tags:
+    - start:openldap

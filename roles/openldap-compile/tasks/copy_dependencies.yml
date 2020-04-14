@@ -1,0 +1,11 @@
+---
+- name: Create a directory if it does not exist
+  file:
+    path: "{{ src_dir }}"
+    state: directory
+    mode: '0755'
+
+- name: Decompress openldap
+  unarchive:
+    src: openldap-{{ openldap_version }}.tgz
+    dest: "{{ src_dir }}"

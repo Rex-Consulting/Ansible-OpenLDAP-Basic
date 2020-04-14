@@ -1,0 +1,6 @@
+---
+- hosts: all
+  roles:
+    - openldap-compile
+    - openldap-start
+    - openldap-stop

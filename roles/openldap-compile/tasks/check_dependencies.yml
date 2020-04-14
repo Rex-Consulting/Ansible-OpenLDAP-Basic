@@ -1,0 +1,13 @@
+---
+- name: Gather the rpm package facts
+  package_facts:
+    manager: auto
+
+- name: Check and install dependencies
+  yum:
+    name: "{{ dependencies }}"
+    state: present
+  become: yes
+  become_method: su
+  become_exe: "{{ sudo_cmd }}"
+  become_flags: ""

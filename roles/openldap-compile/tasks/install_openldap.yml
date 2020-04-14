@@ -1,0 +1,22 @@
+---
+- name: Compile OpenLDAP
+  environment: "{{ working_env }}"
+  shell: |
+    make distclean
+    ./configure {{ openldap_config_args }}
+    make depend
+    make
+    make install
+  args:
+    chdir: "{{ src_dir }}openldap-{{ openldap_version }}"
+  register: result
+  tags:
+    - install:openldap
+
+- name: Print config output
+  debug:
+    msg: "{{ result.stdout_lines }}"
+  tags:
+    - never
+    - debug
+    - debug-install:openldap

@@ -1,0 +1,8 @@
+---
+- name: Stop OpenLDAP
+  shell: |
+    pkill slapd
+  args:
+    chdir: {{ install_dir }}
+  tags:
+    - start:openldap
