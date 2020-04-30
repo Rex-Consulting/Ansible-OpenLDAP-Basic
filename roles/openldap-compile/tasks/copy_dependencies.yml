@@ -1,5 +1,5 @@
 ---
-- name: Create a directory if it does not exist
+- name: Create a source directory if it does not exist
   file:
     path: "{{ src_dir }}"
     state: directory

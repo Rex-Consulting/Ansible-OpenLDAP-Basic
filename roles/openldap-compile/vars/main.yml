@@ -1,9 +1,11 @@
+sudo_cmd: sudo su -
 admin_usr: ansible-adm
-src_dir: /appl/src/
+base_dir: /apps
+src_dir: "{{ base_dir }}/src/"
 dependencies:
   - libtool-ltdl-devel
 openldap_version: 2.4.49
-openldap_install_dir: /appl/openldap/
+openldap_install_dir: "{{ base_dir }}/openldap/"
 openldap_config_args: --prefix={{ openldap_install_dir }} --disable-bdb --disable-hdb --enable-ldap --enable-meta --enable-overlays --enable-modules
 working_env:
   CC: gcc

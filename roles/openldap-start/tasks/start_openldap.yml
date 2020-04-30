@@ -3,6 +3,6 @@
   shell: |
     ./libexec/slapd {{ openldap_start_args }}
   args:
-    chdir: {{ install_dir }}
+    chdir: "{{ install_dir }}"
   tags:
     - start:openldap

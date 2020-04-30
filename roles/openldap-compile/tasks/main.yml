@@ -10,7 +10,3 @@
 - import_tasks: install_openldap.yml
   tags:
     - install:all
-
-- import_tasks: start_openldap.yml
-  tags:
-    - start:openldap
