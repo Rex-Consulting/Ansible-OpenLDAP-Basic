@@ -21,7 +21,8 @@ Update the included hosts file. Then run the playbook:
     dependencies - List of dependencies needed to install OpenLDAP
     openldap_version - Version of OpenLDAP to install [2.4.49]
     openldap_install_dir - Location of where OpenLDAP will be installed [/apps/openldap]
-    openldap_configs_args - OpenLDAP installation flags [--prefix={{ openldap_install_dir }} --disable-bdb --disable-hdb --enable-ldap --enable-meta --enable-overlays --enable-module]
+    openldap_configs_args - OpenLDAP installation flags 
+      [--prefix={{ openldap_install_dir }} --disable-bdb --disable-hdb --enable-ldap --enable-meta --enable-overlays --enable-module]
     working_env - Compilation flags 
       CC - [gcc]
       CFLAGS - [-O -g]
