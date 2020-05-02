@@ -35,11 +35,11 @@ Update the included hosts file. Then run the playbook:
 1. Clone the repository
 2. Modify the variable file (Ansible-OpenLDAP-Basic/roles/openldap-compile/vars/main.yml) as needed. Typically the default entries will work fine. However make note of the following:
 
-  sudo_cmd may required to be set to install dependencies. Most environments work well using the default [sudo su -], however, in the case where you need to use a script for privilege escalation, you will need to modify your script a bit differently. Mike Mikhail over at [link](http://blog.mmikhail.com/2018/09/ansible-how-to-become-different-person.html) has a great article detailing how to modify your privilege escalation scripts to work with ansible.
+  sudo_cmd may be required to be set to install dependencies. Most environments work well using the default [sudo su -], however in the case where you need to use a script for privilege escalation, you will need to modify your script a bit differently. Mike Mikhail over at [link](http://blog.mmikhail.com/2018/09/ansible-how-to-become-different-person.html) has a great article detailing how to modify your privilege escalation scripts to work with ansible.
 
   You will probably want to change the ansible-adm user to whatever user has permission to launch openldap. The base_dir variable should also be chagned if you do not have an /apps directory. 
 
-  This repository comes with the 2.4.49 OpenLDAP code. If you need to use a more current version you can just swap the tgz file inside roles/openldap-compile/files/ for the newer version and updateopenldap_version.
+  This repository comes with the 2.4.49 OpenLDAP code. If you need to use a more current version you can just swap the tgz file inside roles/openldap-compile/files/ for the newer version and update openldap_version.
 
   Last, OpenLDAP is compiled using basic flags. If you need additional features compiled inside the slapd executable consider modifying the openldap_configs_args variable.
 
