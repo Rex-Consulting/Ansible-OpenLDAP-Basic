@@ -35,7 +35,7 @@ Update the included hosts file. Then run the playbook:
 1. Clone the repository
 2. Modify the variable file (Ansible-OpenLDAP-Basic/roles/openldap-compile/vars/main.yml) as needed. Typically the default entries will work fine. However make note of the following:
 
-  sudo_cmd may required to be set to install dependencies. Most environments work well using the default [sudo su -], however, in the case where you need to use a script for privilege escalation, you will need to modify your script a bit differently. Mike Mikhail over at http://blog.mmikhail.com/2018/09/ansible-how-to-become-different-person.html has a great article detailing how to modify your privilege escalation scripts to work with ansible.
+  sudo_cmd may required to be set to install dependencies. Most environments work well using the default [sudo su -], however, in the case where you need to use a script for privilege escalation, you will need to modify your script a bit differently. Mike Mikhail over at [link](http://blog.mmikhail.com/2018/09/ansible-how-to-become-different-person.html) has a great article detailing how to modify your privilege escalation scripts to work with ansible.
 
   You will probably want to change the ansible-adm user to whatever user has permission to launch openldap. The base_dir variable should also be chagned if you do not have an /apps directory. 
 
