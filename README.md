@@ -59,8 +59,12 @@ To install openldap:
 
 To start openldap:
 
-ansible-playbook -i hosts deploy_openldap.yml -t "start:openldap"
+    ansible-playbook -i hosts deploy_openldap.yml -t "start:openldap"
 
 To stop openldap:
 
-ansible-playbook -i hosts deploy_openldap.yml -t "stop:openldap"
+    ansible-playbook -i hosts deploy_openldap.yml -t "stop:openldap"
+
+## Also See
+
+[Blog Post](https://www.rexconsulting.net/a-beginners-guide-to-deploying-openldap-with-ansible/)
