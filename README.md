@@ -51,7 +51,7 @@ For example:
 
 Ensure that the ansible_user entry can ssh into the target server, which in this case is ansibletest. Notice that ldap1 is just a label for the ansibletest server.
 
-3. From the parent directory, run the following command:
+4. From the parent directory, run the following command:
 
 To install openldap:
 
